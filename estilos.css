@@ -1,0 +1,135 @@
+body {
+    background-color: #192841; /* Azul marino oscuro */
+    font-family: Arial, sans-serif;
+    color: #fff; /* Texto en blanco */
+}
+
+.entry {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2c3e50; /* Azul marino más claro */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+h2 {
+    color: #fff;
+}
+
+.content {
+    float: left;
+    width: 70%;
+}
+
+p {
+    color: #ddd; /* Texto en gris */
+    margin-bottom: 10px;
+}
+
+a {
+    color: #bbb; /* Enlaces en gris */
+    text-decoration: none;
+    background-color: #333; /* Fondo del enlace */
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+img {
+    max-width: 30%;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    max-height: 10%;
+}
+
+.logo img {
+    max-width: auto;
+    min-width: 20%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-size:auto;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+.entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Borde para visualización */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+.entry .column {
+    flex: 1;
+    padding: 10px;
+}
+
+.entry .content {
+    margin-bottom: 10px;
+}
+
+.entry h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.entry p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.entry a {
+    color: #777;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.entry img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 300px) {
+    .entry .column {
+        flex: 100%; /* Ocupar todo el ancho en dispositivos pequeños */
+    }
+
+    .entry img {
+        max-width: 100%;
+    }
+}
+/* Nueva clase main-box y main-box-responsive-image */
+.main-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.main-box-responsive-image img {
+    max-width: 41%;
+    height: auto;
+    border-radius: 5px;
+}
