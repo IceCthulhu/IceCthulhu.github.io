@@ -1,23 +1,24 @@
-body {
-    background-color: #001f3f; /* Azul marino */
-    color: #fff; /* Color de texto blanco */
-}
+
 /* Estilos para la cabecera en dispositivos móviles */
 @media only screen and (max-width: 768px) {
     header {
         padding: 10px;
+        margin-bottom: 5px;
+        position: sticky;
     }
 
     .logo img {
-        max-width: 100%;
+        min-width: 40%;;
         margin-right: auto;
     }
 
     nav ul {
         flex-direction: column;
+        width: 10%;
     }
 
     nav ul li {
+        width: 10%;
         margin: 5px 0;
         text-align: center; /* Centrar el texto en dispositivos móviles */
     }
@@ -33,6 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; /* Ajusta el espaciado según sea necesario */
+    margin-bottom: 20px;/* ajuste del 18/03/24 */
 }
 .logo img {
     max-width: 15%; /* Tamaño máximo del logo al 15% del contenedor */
@@ -63,17 +65,29 @@ main {
     background-color: #fff; /* Fondo blanco para la sección main */
     padding: 20px; /* Espaciado interno para el contenido */
     color: #000;
+    padding-left: 5%;
 }
 
 .content {
     flex-grow: 1; /* Permite que la sección de contenido crezca */
-    margin-right: 20px; /* Espacio entre la barra lateral y el contenido */
+    margin-right: 10%; /* Espacio entre la barra lateral y el contenido */
 }
 
 .sidebar {
-    width: 25%; /* Ancho de la barra lateral */
+    width: 30%; /* Ancho de la barra lateral */
+    margin: 10px;
 }
-
+body {
+    background-color: #001f3f; /* Azul marino */
+    color: #fff; /* Color de texto blanco */
+}
+* {
+    margin: 0;
+    padding: 0;
+  }
+div {
+    margin-left: 1em;
+  }
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
     main {
@@ -91,6 +105,9 @@ main {
         max-width: 100%; /* Ajustar el ancho máximo de la imagen */
         height: auto; /* Permitir que la altura se ajuste automáticamente */
         margin: 10px auto; /* Centrar la imagen debajo del texto en móviles */
+    }
+    header{
+        position: sticky;
     }
 }
 
@@ -111,4 +128,14 @@ footer {
 
 .footer-bottom {
     margin-top: 10px; /* Espaciado superior */
+}
+#n123{
+    float:right;
+    clear: right;
+    max-width: 35%;
+    width: auto;
+    margin:0.5em 0 1.3em 1.4em
+}
+h1{
+    margin-left: 5%;
 }
