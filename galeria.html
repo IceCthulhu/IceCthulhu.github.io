@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrusel de Fotos</title>
+<title>Galería de Fotos</title>
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="stylesheet" href="estilos2.css">
 <style>
   .carousel-container {
@@ -15,10 +16,12 @@
   .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    gap: 18px;
   }
   .carousel-image {
     width: 25%;
     flex: 0 0 auto;
+    gap: 10px;
   }
   .carousel-control {
     position: absolute;
@@ -41,6 +44,19 @@
 </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="logo2.png" alt="Logo LAAS" width=15%>
+        </div>
+        <nav>
+            <ul >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
   <div class="carousel-container">
     <button class="carousel-control" onclick="moveCarousel(-1)">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
