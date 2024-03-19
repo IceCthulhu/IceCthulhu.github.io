@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel de Fotos</title>
+<link rel="stylesheet" href="estilos2.css">
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-image {
+    width: 25%;
+    flex: 0 0 auto;
+  }
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .carousel-control:hover {
+    background-color: #333;
+  }
+</style>
+</head>
+<body>
+  <div class="carousel-container">
+    <button class="carousel-control" onclick="moveCarousel(-1)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M14.59 8.59L10 13.17 5.41 8.59 4 10l6 6 6-6z" fill="white"/>
+      </svg>
+    </button>
+    <button class="carousel-control" style="right: 0;" onclick="moveCarousel(1)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12 8.59 16.59 10 18l8-8z" fill="white"/>
+      </svg>
+    </button>
+    <div class="carousel-slide">
+        <img class="carousel-image" src="galeria/av1.jpeg" alt="av 1">
+        <img class="carousel-image" src="galeria/av2.jpeg" alt="av 2">
+        <img class="carousel-image" src="galeria/av3.jpeg" alt="av 3">
+        <img class="carousel-image" src="galeria/av4.jpeg" alt="av 4">
+        <img class="carousel-image" src="galeria/av5.jpeg" alt="av 1">
+        <img class="carousel-image" src="galeria/av6.jpeg" alt="av 2">
+        <img class="carousel-image" src="galeria/av7.jpeg" alt="av 3">
+        <img class="carousel-image" src="galeria/av8.jpeg" alt="av 4">
+      </div>
+  </div>
+
+  <script>
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    const totalImages = carouselImages.length;
+    let currentIndex = 0;
+
+    function moveCarousel(direction) {
+      currentIndex = (currentIndex + direction + totalImages) % totalImages;
+      const translateValue = `translateX(-${currentIndex * 25}%)`;
+      carouselSlide.style.transform = translateValue;
+    }
+  </script>
+</body>
+<footer>
+    <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Lima - Perú</p>
+        <p>Teléfono: +123 456 789</p>
+        <p>Email: icbtcg@gmail.com</p>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>
