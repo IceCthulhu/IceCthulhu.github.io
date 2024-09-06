@@ -142,3 +142,9 @@ h1{
 article{
     margin-top: 3%;
 }
+#bienvenida{
+    margin-left:5%;
+}
+#bienvenida h1{
+    text-align:center;
+}
