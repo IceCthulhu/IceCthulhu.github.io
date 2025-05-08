@@ -129,7 +129,7 @@ footer {
 .footer-bottom {
     margin-top: 10px; /* Espaciado superior */
 }
-#n123{
+.n123{
     float:right;
     clear: right;
     max-width: 35%;
